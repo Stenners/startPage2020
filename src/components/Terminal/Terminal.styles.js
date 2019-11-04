@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import breakpoint from 'styled-components-breakpoint'
 
 const TerminalWrapper = styled.div`
   background-color: #282a36;
@@ -6,12 +7,17 @@ const TerminalWrapper = styled.div`
   color: #f4f4f4;
   border-radius: 3px;
   box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.4);
-  width: 55vw;
-  height: auto;
-  min-height: 50vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
+
+  ${breakpoint('tablet')`
+    width: 55vw;
+    height: auto;
+    min-height: 50vh;
+  `}
 `
 const Pane = styled.div`
   display: flex;
@@ -38,7 +44,12 @@ const Input = styled.input`
 
 const Link = styled.a`
   text-decoration: none;
-  color: ${p => (p.selected ? p.theme.Background : (p.folder ? p.theme.Pink : p.theme.Foreground))};
+  color: ${p =>
+    p.selected
+      ? p.theme.Background
+      : p.folder
+      ? p.theme.Pink
+      : p.theme.Foreground};
   background-color: ${p => (p.selected ? p.theme.Purple : 'transparent')};
   padding: 0.2rem 1rem;
   margin: 0.1rem 0;
