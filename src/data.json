@@ -1,0 +1,245 @@
+{
+  "bookmarks": [
+    {
+      "title": "Reading",
+      "children": [
+        {
+          "title": "Mail",
+          "url": "https://mail.yandex.com/?uid=1130000027189821#inbox"
+        },
+        {
+          "title": "Facebook",
+          "url": "http://www.facebook.com/"
+        },
+        {
+          "title": "Messenger",
+          "url": "https://www.facebook.com/messages"
+        },
+        {
+          "title": "WhatsApp Web",
+          "url": "https://web.whatsapp.com/"
+        },
+        {
+          "title": "xkcd",
+          "url": "http://xkcd.com/"
+        },
+        {
+          "title": "Rock, Paper, Shotgun",
+          "url": "http://www.rockpapershotgun.com/"
+        },
+        {
+          "title": "Brew",
+          "children": [
+            {
+              "title": "Brülosophy",
+              "url": "http://brulosophy.com/"
+            },
+            {
+              "title": "AussieHomeBrewer.com",
+              "url": "http://www.aussiehomebrewer.com/"
+            },
+            {
+              "title": "CoffeeSnobs",
+              "url": "http://www.coffeesnobs.com.au/"
+            },
+            {
+              "title": "Brewer's Friend",
+              "url": "https://www.brewersfriend.com/"
+            },
+            {
+              "title": "Step-by-step Biab (lcba Clone) 19L",
+              "url": "https://aussiehomebrewer.com/threads/step-by-step-biab-lcba-clone.55617/#entry784483"
+            },
+            {
+              "title": "The Brew Shop",
+              "url": "https://www.thebrewshop.com.au/"
+            },
+            {
+              "title": "QldKev's New Biab With Internal Rims | Aussie Home Brewer",
+              "url": "https://aussiehomebrewer.com/threads/qldkevs-new-biab-with-internal-rims.68324/"
+            },
+            {
+              "title": "HomeBrewTalk",
+              "url": "https://www.homebrewtalk.com/forum/"
+            },
+            {
+              "title": "Vinepair",
+              "url": "https://vinepair.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FED",
+      "children": [
+        {
+          "title": "Smashing Magazine",
+          "url": "http://www.smashingmagazine.com/"
+        },
+        {
+          "title": "Front-End Front",
+          "url": "https://frontendfront.com/"
+        },
+        {
+          "title": "A List Apart",
+          "url": "http://alistapart.com/"
+        },
+        {
+          "title": "CSS-Tricks",
+          "url": "http://css-tricks.com/"
+        },
+        {
+          "title": "Echo JS - JavaScript News",
+          "url": "http://www.echojs.com/"
+        },
+        {
+          "title": "Repos",
+          "url": "https://github.com/Stenners?tab=repositories"
+        },
+        {
+          "title": "RealSpot",
+          "children": [
+            {
+              "title": "dbdiagram.io",
+              "url": "https://dbdiagram.io/d/5d606439ced98361d6ddde9b"
+            },
+            {
+              "title": "Bitbucket",
+              "url": "https://bitbucket.org/realspotmedia/"
+            }
+          ]
+        },
+        {
+          "title": "Stock photo",
+          "children": [
+            {
+              "title": "Unsplash | Free High-Resolution Photos",
+              "url": "https://unsplash.com/"
+            },
+            {
+              "title": "Pexels",
+              "url": "https://www.pexels.com/"
+            },
+            {
+              "title": "unDraw",
+              "url": "https://undraw.co/"
+            },
+            {
+              "title": "Subtle Patterns | Free textures for your next web project",
+              "url": "https://www.toptal.com/designers/subtlepatterns/"
+            },
+            {
+              "title": "SVG Repo - Free SVG Vectors and Icons",
+              "url": "https://www.svgrepo.com/"
+            },
+            {
+              "title": "StockSnap.io - Beautiful Free Stock Photos",
+              "url": "https://stocksnap.io/"
+            },
+            {
+              "title": "Pixabay - Free Images",
+              "url": "http://pixabay.com/"
+            }
+          ]
+        },
+        {
+          "title": "Domain",
+          "children": [
+            {
+              "title": "Cloudflare - Web Performance & Security",
+              "url": "https://www.cloudflare.com/a/overview/stenners.com"
+            },
+            {
+              "title": "GCP - Stenners",
+              "url": "https://console.cloud.google.com/home/dashboard?project=stenners-197201&_ga=2.90327839.-424768885.1520295694"
+            },
+            {
+              "title": "Netlify",
+              "url": "https://app.netlify.com/sites/priceless-rosalind-b197ea/settings/general"
+            }
+          ]
+        },
+        {
+          "title": "Training",
+          "children": [
+            {
+              "title": "The Vue.js Master Class",
+              "url": "https://vueschool.io/courses/the-vuejs-master-class"
+            },
+            {
+              "title": "Advanced React & GraphQL — Build Full Stack Applications with React and GraphQL",
+              "url": "https://advancedreact.com/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Accenture",
+      "children": [
+        {
+          "title": "MyTimeAndExpenses",
+          "url": "https://myte.accenture.com/OGTE/secure/TimesheetPage.aspx"
+        },
+        {
+          "title": "Reservations",
+          "url": "https://reservations.accenture.com/reserve-space/"
+        },
+        {
+          "title": "People",
+          "url": "https://people.accenture.com/"
+        },
+        {
+          "title": "myScheduling",
+          "url": "https://myscheduling.accenture.com/Me/Index#/home"
+        },
+        {
+          "title": "Mail",
+          "url": "https://myemail.accenture.com/owa/"
+        },
+        {
+          "title": "RISE Leadership Journey",
+          "url": "https://rise.accenture.com/"
+        },
+        {
+          "title": "Home - myLearning",
+          "url": "https://mylearning.accenture.com/myl-ui/learner/home"
+        },
+        {
+          "title": "Performance Achievement",
+          "url": "https://performance.accenture.com/#/home/anthony.stenmark/profile"
+        },
+        {
+          "title": "EPS",
+          "url": "https://apssc.accenture.com/eps/myhistory.aspx"
+        },
+        {
+          "title": "FED Community - Agile Board",
+          "url": "https://alm.accenture.com/jira/secure/RapidBoard.jspa?rapidView=7383&projectKey=IIBGJJJM&selectedIssue=IIBGJJJM-57"
+        },
+        {
+          "title": "Leave Policy Australia",
+          "url": "https://policies.accenture.com/policy/1552"
+        },
+        {
+          "title": "AWS Certification Preparation via A Cloud Guru",
+          "url": "https://mylearning.accenture.com/mylearningui/learner/coursedetail/1612563"
+        }
+      ]
+    },
+    {
+      "title": "AI Design System",
+      "children": [
+        {
+          "title": "Browse AI-design-system / ai-design-system - Bitbucket",
+          "url": "https://innersource.accenture.com/projects/AIDS/repos/ai-design-system/browse"
+        },
+        {
+          "title": "Trello",
+          "url": "https://trello.com/b/CkDOaruh/ai-design-system"
+        }
+      ]
+    }
+  ]
+}
