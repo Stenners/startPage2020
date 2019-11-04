@@ -95,6 +95,7 @@ const Terminal = ({ theme }) => {
 
   return (
     <TerminalWrapper>
+      {error && <code>{error}</code>}
       {value && (
         <>
           <Column data={value.val()} />
@@ -115,7 +116,7 @@ const Terminal = ({ theme }) => {
             onChange={e => setSearchVal(e.target.value)}
           />
         </Console>
-        <Time>{new Date().toLocaleString()}</Time>
+        <Time>{new Date().toLocaleString('en-AU')}</Time>
       </InfoLine>
     </TerminalWrapper>
   )
