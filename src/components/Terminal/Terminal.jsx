@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import firebase from '../../firebase'
-import { useObject } from 'react-firebase-hooks/database'
 import Styles from './Terminal.styles'
-// import data from '../../data.json'
 
 const Terminal = ({ theme }) => {
-  const [value, error] = useObject(firebase.ref('bookmarks'))
+  let error
+  const storage = localStorage.getItem('startpage-bookmarks')
+  const [value, setValue] = useState()
   const [selection, setSelection] = useState([0, 0, 0])
   const [searchVal, setSearchVal] = useState()
   const [curLevel, setCurLevel] = useState(0)
-  // const [bookmarks, setBookmarks] = useState()
-
   const {
     TerminalWrapper,
     Pane,
@@ -20,6 +18,29 @@ const Terminal = ({ theme }) => {
     Console,
     Time,
   } = Styles(theme)
+
+  useEffect(() => {
+    if (storage) {
+      setValue(JSON.parse(storage))
+      getFirebaseData()
+    } else {
+      getFirebaseData()
+    }
+  }, [storage])
+
+  const getFirebaseData = () => {
+    firebase
+      .ref('bookmarks')
+      .once('value')
+      .then(snapshot => {
+        setValue(snapshot.val())
+        console.log(snapshot.val())
+        localStorage.setItem(
+          'startpage-bookmarks',
+          JSON.stringify(snapshot.val())
+        )
+      })
+  }
 
   const selectEl = (el, url, level) => {
     let newArr = [...selection]
@@ -98,17 +119,17 @@ const Terminal = ({ theme }) => {
       {error && <code>{error}</code>}
       {value && (
         <>
-          <Column data={value.val()} />
-          <Column data={value.val()[selection[0]].children} level="1" />
+          <Column data={value} />
+          <Column data={value[selection[0]].children} level="1" />
           <Column
-            data={value.val()[selection[0]].children[selection[1]].children}
+            data={value[selection[0]].children[selection[1]].children}
             level="2"
           />
         </>
       )}
       <InfoLine>
         <Console>
-          >{' '}
+          <strong>~ </strong>
           <Input
             value={searchVal}
             autoFocus

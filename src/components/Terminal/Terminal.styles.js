@@ -12,18 +12,19 @@ const TerminalWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
+  border: 2px solid ${p => p.theme.Purple};
 
   ${breakpoint('tablet')`
     width: 55vw;
     height: auto;
     min-height: 50vh;
+    
   `}
 `
 const Pane = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  color: ${theme => theme.Cyan};
 `
 const InfoLine = styled.div`
   display: flex;
@@ -48,7 +49,7 @@ const Link = styled.a`
     p.selected
       ? p.theme.Background
       : p.folder
-      ? p.theme.Pink
+      ? p.theme.Purple
       : p.theme.Foreground};
   background-color: ${p => (p.selected ? p.theme.Purple : 'transparent')};
   padding: 0.2rem 1rem;
@@ -59,10 +60,11 @@ const Link = styled.a`
 const Console = styled.div`
   flex: 1;
   color: ${p => p.theme.Green};
+
 `
 const Time = styled.div`
   background-color: ${p => p.theme.Comment};
-  color: ${p => p.theme.Background};
+  color: ${p => p.theme.Foreground};
   font-size: 0.8rem;
   position: relative;
   padding: 0 0.3rem;
@@ -77,6 +79,7 @@ const Time = styled.div`
   }
 `
 
+
 const Styles = theme => {
   return {
     TerminalWrapper: TerminalWrapper,
@@ -85,7 +88,7 @@ const Styles = theme => {
     Input: Input,
     Time: Time,
     Console: Console,
-    Link: Link,
+    Link: Link
   }
 }
 
