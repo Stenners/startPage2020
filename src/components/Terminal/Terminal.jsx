@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import firebase from '../../firebase'
 import Styles from './Terminal.styles'
+import BookmarkService from './bookmark.service'
 
 const Terminal = ({ theme }) => {
   let error
@@ -17,6 +18,7 @@ const Terminal = ({ theme }) => {
     Input,
     Console,
     Time,
+    Position,
   } = Styles(theme)
 
   useEffect(() => {
@@ -34,7 +36,6 @@ const Terminal = ({ theme }) => {
       .once('value')
       .then(snapshot => {
         setValue(snapshot.val())
-        console.log(snapshot.val())
         localStorage.setItem(
           'startpage-bookmarks',
           JSON.stringify(snapshot.val())
@@ -59,7 +60,18 @@ const Terminal = ({ theme }) => {
     let el
     switch (e.key) {
       case 'Enter':
-        window.location.href = `https://google.com/search?q=${searchVal}`
+        if (searchVal.startsWith('new b ')) {
+          const inputs = searchVal.replace('new b ', '').split(' ');
+          console.log(`new bookmark => ${inputs}`)
+          console.log(selection, curLevel);
+          // BookmarkService('new b', inputs, parent)
+        } else if (searchVal.startsWith('new f')) {
+          const inputs = searchVal.replace('new f ', '');
+          console.log(`new folder => ${inputs}`)
+          BookmarkService('new f', inputs)
+        } else {
+          window.location.href = `https://google.com/search?q=${searchVal}`
+        }
         break
       case 'ArrowDown':
         el = selection[curLevel] + 1
@@ -78,7 +90,6 @@ const Terminal = ({ theme }) => {
       case 'ArrowLeft':
         setCurLevel(curLevel === 0 ? curLevel : curLevel - 1)
         break
-
       default:
         break
     }
@@ -115,31 +126,43 @@ const Terminal = ({ theme }) => {
   }
 
   return (
-    <TerminalWrapper>
-      {error && <code>{error}</code>}
-      {value && (
-        <>
-          <Column data={value} />
-          <Column data={value[selection[0]].children} level="1" />
-          <Column
-            data={value[selection[0]].children[selection[1]].children}
-            level="2"
-          />
-        </>
-      )}
-      <InfoLine>
-        <Console>
-          <strong>~ </strong>
-          <Input
-            value={searchVal}
-            autoFocus
-            onKeyDown={e => typing(e)}
-            onChange={e => setSearchVal(e.target.value)}
-          />
-        </Console>
-        <Time>{new Date().toLocaleString('en-AU')}</Time>
-      </InfoLine>
-    </TerminalWrapper>
+    <>
+      {/* <SmallTerm>
+        <label htmlFor="title">Title</label>
+        <Input name="title" />
+        <br></br>
+        <label htmlFor="url">URL</label>
+        <Input name="url" />
+      </SmallTerm> */}
+      <TerminalWrapper>
+        {error && <code>{error}</code>}
+        {value && (
+          <>
+            <Column data={value} />
+            <Column data={value[selection[0]].children} level="1" />
+            <Column
+              data={value[selection[0]].children[selection[1]].children}
+              level="2"
+            />
+          </>
+        )}
+        <InfoLine>
+          <Console>
+            <strong>~ </strong>
+            <Input
+              value={searchVal}
+              autoFocus
+              onKeyDown={e => typing(e)}
+              onChange={e => setSearchVal(e.target.value)}
+            />
+          </Console>
+          <Position>
+            [{selection[0]}.{selection[1]}.{selection[2]}]
+          </Position>
+          <Time>{new Date().toLocaleString('en-AU')}</Time>
+        </InfoLine>
+      </TerminalWrapper>
+    </>
   )
 }
 

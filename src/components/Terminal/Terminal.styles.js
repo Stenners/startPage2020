@@ -18,9 +18,18 @@ const TerminalWrapper = styled.div`
     width: 55vw;
     height: auto;
     min-height: 50vh;
-    
   `}
 `
+
+const SmallTerm = styled(TerminalWrapper)`
+  ${breakpoint('tablet')`
+    width: 45vw;
+    height: auto;
+    min-height: 20vh;
+    position: absolute;
+  `}
+`
+
 const Pane = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,17 +87,25 @@ const Time = styled.div`
     left: -11px;
   }
 `
-
+const Position = styled.div`
+  color: ${p => p.theme.Comment};
+  margin-right: 1.3rem;
+  padding: 0 0.3rem;
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+`
 
 const Styles = theme => {
   return {
     TerminalWrapper: TerminalWrapper,
+    SmallTerm: SmallTerm,
     Pane: Pane,
     InfoLine: InfoLine,
     Input: Input,
     Time: Time,
     Console: Console,
-    Link: Link
+    Link: Link,
+    Position: Position
   }
 }
 
