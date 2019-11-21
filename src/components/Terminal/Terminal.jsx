@@ -108,6 +108,7 @@ const Terminal = ({ theme }) => {
       <Pane>
         {data.map((item, i) => {
           const title = item.title
+          const archived = item.archived;
           const url = item.url ? item.url : false
           return (
             <Link
@@ -127,13 +128,6 @@ const Terminal = ({ theme }) => {
 
   return (
     <>
-      {/* <SmallTerm>
-        <label htmlFor="title">Title</label>
-        <Input name="title" />
-        <br></br>
-        <label htmlFor="url">URL</label>
-        <Input name="url" />
-      </SmallTerm> */}
       <TerminalWrapper>
         {error && <code>{error}</code>}
         {value && (
